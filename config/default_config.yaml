@@ -1,5 +1,5 @@
 data:
-  input_folder: "data"  # Folder containing input files
+  input_folder: "/path/to/your/data"  # Replace this path with your actual data folder location
   file_pattern: "*.nc4"  # File pattern to match
   variable_name: "MWprecipitation"  # Variable name in the data file
   data_type: "nc4"  # Supported: nc4, netcdf, geotiff

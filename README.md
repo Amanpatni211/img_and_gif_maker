@@ -24,19 +24,27 @@ cd img_and_gif_maker
 pip install -r requirements.txt
 ```
 
+## Configuration
+
+### Data Location
+The input data folder can be configured in `config/default_config.yaml`. You can set `data.input_folder` to any absolute path on your system where your data files are stored. For example:
+
+```yaml
+data:
+  input_folder: "/path/to/your/data"  # Replace with your actual data folder path
+```
+
+### Output Folders
+The tool will automatically create two output folders when you run it:
+- `output/images`: Contains individual frame images
+- `output/animations`: Contains the final GIF animation
+
 ## Usage
 
-1. Place your data files in the `data` directory
-
-2. Configure visualization parameters in `config/default_config.yaml`:
-   - Set input folder and file pattern
-   - Configure date range
-   - Adjust visualization parameters
-   - Set output options
-
-3. Run the script:
+1. Update the data folder path in `config/default_config.yaml`
+2. Run the script:
 ```bash
-python src/run.py --config config/default_config.yaml
+python src/run.py
 ```
 
 ## Configuration Options
