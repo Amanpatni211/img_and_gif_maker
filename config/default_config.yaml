@@ -1,0 +1,46 @@
+data:
+  input_folder: "data"  # Folder containing input files
+  file_pattern: "*.nc4"  # File pattern to match
+  variable_name: "MWprecipitation"  # Variable name in the data file
+  data_type: "nc4"  # Supported: nc4, netcdf, geotiff
+
+date_range:
+  start: "1999-01-01"  # Start of available data
+  end: "1999-04-30"    # End of available data
+
+visualization:
+  region:
+    lon_min: 40
+    lon_max: 120
+    lat_min: -35
+    lat_max: 40
+  colormap: "RdYlBu_r"
+  normalization:
+    type: "log"  # Options: linear, log, custom
+    vmin: 0.1
+    vmax: 100
+  figure:
+    size: [12, 10]
+    dpi: 150
+  map_features:
+    coastline: true
+    borders: true
+    land: true
+    ocean: true
+    gridlines: true
+  title:
+    enabled: true
+    text: "IMERG Daily Precipitation"
+    date_format: "%d %B %Y"
+
+output:
+  images:
+    enabled: true
+    folder: "output/images"
+    format: "png"
+  gif:
+    enabled: true
+    folder: "output/animations"
+    filename: "precipitation_1999_q1.gif"
+    duration: 0.25  # seconds per frame
+    loop: 0  # 0 for infinite loop 
