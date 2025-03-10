@@ -1,12 +1,12 @@
 data:
-  input_folder: "/path/to/your/data"  # Replace this path with your actual data folder location
-  file_pattern: "*.nc4"  # File pattern to match
-  variable_name: "MWprecipitation"  # Variable name in the data file
-  data_type: "nc4"  # Supported: nc4, netcdf, geotiff
+  input_folder: "/home/mircore/Desktop/Phd/Aman/DATA/imerg_data"
+  file_pattern: "imerg_daily_2016*.nc4"
+  variable_name: "MWprecipitation"
+  data_type: "nc4"
 
 date_range:
-  start: "1999-01-01"  # Start of available data
-  end: "1999-04-30"    # End of available data
+  start: "2016-03-23"
+  end: "2016-03-27"  
 
 visualization:
   region:
@@ -16,7 +16,7 @@ visualization:
     lat_max: 40
   colormap: "RdYlBu_r"
   normalization:
-    type: "log"  # Options: linear, log, custom
+    type: "log"
     vmin: 0.1
     vmax: 100
   figure:
@@ -24,7 +24,7 @@ visualization:
     dpi: 150
   map_features:
     coastline: true
-    borders: true
+    borders: false  # Removed borders as requested
     land: true
     ocean: true
     gridlines: true
@@ -41,6 +41,6 @@ output:
   gif:
     enabled: true
     folder: "output/animations"
-    filename: "precipitation_1999_q1.gif"
-    duration: 0.25  # seconds per frame
-    loop: 0  # 0 for infinite loop 
+    filename: "precipitation_2016_slow.gif"
+    duration: 0.001
+    loop: 0 
